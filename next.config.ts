@@ -1,16 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable static exports for Vercel
-  output: 'standalone',
-  // Disable image optimization since we're not using dynamic images
+  output: 'export',
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-    ],
+    unoptimized: true
   },
+  trailingSlash: true
 };
 
 module.exports = nextConfig;
